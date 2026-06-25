@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Productivity Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>📚 Student Productivity Hub</h1>
+    <p>Study Smarter, Stay Organized</p>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</header>
+
+<div class="container">
+
+    <!-- Task Manager -->
+    <section class="card">
+        <h2>✅ Task Manager</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter task">
+
+        <select id="category">
+            <option>DSA</option>
+            <option>Python</option>
+            <option>COA</option>
+            <option>Economics</option>
+            <option>Personal</option>
+        </select>
+
+        <button onclick="addTask()">Add Task</button>
+
+        <h3 id="progress">Completed: 0 / 0</h3>
+
+        <ul id="taskList"></ul>
+
+        <button onclick="deleteAllTasks()">Delete All Tasks</button>
+    </section>
+
+    <!-- Notes -->
+    <section class="card">
+        <h2>📝 Quick Notes</h2>
+
+        <textarea
+        id="notes"
+        placeholder="Write notes here..."></textarea>
+
+        <button onclick="saveNotes()">Save Notes</button>
+    </section>
+
+    <!-- Pomodoro -->
+    <section class="card">
+        <h2>🍅 Pomodoro Timer</h2>
+
+        <div id="timer">25:00</div>
+
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+    </section>
+
+    <!-- Exam Countdown -->
+    <section class="card">
+        <h2>🎯 Exam Countdown</h2>
+
+        <input type="date" id="examDate">
+
+        <button onclick="calculateCountdown()">
+            Calculate
+        </button>
+
+        <p id="countdownResult"></p>
+    </section>
+
+</div>
+
+<footer>
+    Created by Anwesha Priyadarshini
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
